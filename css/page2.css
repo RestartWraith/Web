@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: white;
+    padding: 15px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  th {
+    background: skyblue;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background: rgba(33,150,243,0.1);
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #87b8e0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  }
+  
+  /* 音频播放按钮样式 */
+  .audio-btn {
+    cursor: pointer;
+    color: #2196F3;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .audio-btn::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #2196F3;
+    transition: transform 0.2s ease;
+  }
+  
+  .audio-btn:hover {
+    color: #1976D2;
+  }
+  
+  .audio-btn:hover::before {
+    transform: translateY(-50%) scale(1.2);
+  }
+  
+  .audio-btn.playing::before {
+    content: '❚❚';
+    font-size: 16px;
+  }
+  
