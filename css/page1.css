@@ -5,6 +5,7 @@ body {
     color: white;
   }
   
+  /* 卡片容器 - 悬浮动画效果 */
   .card {
     display: inline-block;
     padding: 30px;
@@ -14,11 +15,13 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
   }
   
+  /* 卡片悬浮状态 - 缩放和阴影效果 */
   .card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   }
   
+  /* 头像样式 - 圆形裁剪和边框效果 */
   .avatar {
     width: 150px;
     height: 150px;

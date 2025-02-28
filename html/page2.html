@@ -7,31 +7,63 @@
   <link rel="stylesheet" href="../css/page2.css"> 
 </head>
 <body>
-  <h2>个人详细信息</h2>
-  <table>
-    <tr>
-      <th>头像</th>
-      <th>姓名</th>
-      <th>学号</th>
-      <th>兴趣</th>
-      <th>个人经历</th>
-    </tr>
-    <tr>
-      <td><img class="avatar" src="../images/1.jpg" alt="方形头像"></td>
-      <td>阮鑫伟</td>
-      <td>2405090416</td>
-      <td>
-        <span class="audio-btn" onclick="playAudio()">
-          爱玩Apex!我要玩A！派克斯
-        </span>
-      </td>
-      <td>学习过 Mysql、JavaWeb、SpringMVC、MyBatis、SpringBoot、Vue</td>
-    </tr>
-  </table>
+  <!-- 添加固定导航栏 -->
+  <nav class="navbar">
+    <div class="nav-logo">MyProfile</div>
+    <div class="nav-links">
+      <a href="#" class="nav-item">首页</a>
+      <a href="#" class="nav-item">关于我</a>
+      <a href="#" class="nav-item">项目经历</a>
+      <a href="#" class="nav-item">联系方式</a>
+    </div>
+  </nav>
 
-  
+  <!-- 主要内容区域 -->
+  <main class="main-content">
+    <div class="profile-section">
+      <p class="profile-text">
+        <img class="profile-avatar" src="../images/1.jpg" alt="个人头像">
+        <span class="profile-info">姓名：阮鑫伟</span><br>
+        <span class="profile-info">学号：2405090416</span><br>
+        <span class="profile-info">
+          兴趣爱好：<span class="audio-btn" onclick="playAudio()">爱玩Apex!我要玩A！派克斯</span>
+        </span><br>
+        <span class="profile-info">技术栈：学习过 Mysql、JavaWeb、SpringMVC、MyBatis、SpringBoot、Vue</span><br>
+        <span class="profile-info">个人经历:</span>
+        我是一名充满热情的开发者，热爱编程和游戏。在学习过程中，我掌握了多种后端技术栈，
+        并且对前端开发也有着浓厚的兴趣。我喜欢通过编程解决实际问题，同时也享受在游戏中
+        与队友合作的乐趣。作为一名开发者，我始终保持着对新技术的好奇心和学习热情。
+
+        在后端开发领域，我深入学习了Spring生态系统，包括SpringMVC、MyBatis等框架，
+        同时也在数据库管理方面积累了丰富的经验。在校期间，我参与了多个实践项目的开发，
+        其中包括基于SpringBoot的校园二手交易平台和在线考试系统。这些项目不仅让我掌握了
+        完整的开发流程，还锻炼了我的团队协作能力。
+
+        在前端开发方面，我对Vue框架有着深入的理解，能够构建现代化的用户界面。我曾经独立
+        开发过一个基于Vue的个人博客系统，实现了文章管理、评论互动等功能。通过这个项目，
+        我不仅提升了前端开发技能，还学会了如何解决跨域问题和优化网站性能。
+
+        除了技术学习，我也积极参与开源社区，在GitHub上维护着自己的项目仓库，并为一些开源
+        项目提供代码贡献。我相信技术的进步源于不断的学习和实践，未来我希望能在全栈开发
+        领域继续深耕，为用户创造更好的软件产品。在业余时间，我也热衷于技术分享，经常在
+        技术社区发表学习心得，帮助其他同学解决技术问题。
+      </p>
+    </div>
+  </main>
+
+  <!-- 底部点赞区域 -->
+  <div class="feedback-section">
+    <button class="feedback-btn like-btn">
+      <i class="fas fa-thumbs-up"></i> 点赞
+    </button>
+    <button class="feedback-btn dislike-btn">
+      <i class="fas fa-thumbs-down"></i> 点踩
+    </button>
+  </div>
+
   <audio id="myAudio" src="../assets/Apex.mp3"></audio>
-
-  <script src="../js/page2.js"></script> 
+  <!-- 引入Font Awesome图标库 -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+  <script src="../js/page2.js"></script>
 </body>
 </html>
