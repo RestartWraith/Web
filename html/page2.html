@@ -9,7 +9,10 @@
 <body>
   <!-- 添加固定导航栏 -->
   <nav class="navbar">
-    <div class="nav-logo">MyProfile</div>
+    <div class="nav-left">
+      <div class="nav-logo">MyProfile</div>
+      <div id="dateInfo" class="date-info"></div>
+    </div>
     <div class="nav-links">
       <a href="#" class="nav-item">首页</a>
       <a href="#" class="nav-item">关于我</a>
@@ -17,6 +20,19 @@
       <a href="#" class="nav-item">联系方式</a>
     </div>
   </nav>
+
+  <!-- 模态窗口 -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-icon">
+        <i class="fas fa-hard-hat"></i>
+      </div>
+      <h2>提示</h2>
+      <p>正在施工中，敬请期待...</p>
+      <button class="confirm-btn">确认</button>
+    </div>
+  </div>
 
   <!-- 主要内容区域 -->
   <main class="main-content">
@@ -48,16 +64,22 @@
         领域继续深耕，为用户创造更好的软件产品。在业余时间，我也热衷于技术分享，经常在
         技术社区发表学习心得，帮助其他同学解决技术问题。
       </p>
+      <!-- 添加反馈历史记录区域 -->
+      <div id="feedbackHistory" class="feedback-history">
+        <!-- 这里将通过JavaScript动态添加反馈记录 -->
+      </div>
     </div>
   </main>
 
   <!-- 底部点赞区域 -->
   <div class="feedback-section">
-    <button class="feedback-btn like-btn">
+    <button class="feedback-btn like-btn" onclick="handleFeedback('like')">
       <i class="fas fa-thumbs-up"></i> 点赞
+      <span class="feedback-animation"></span>
     </button>
-    <button class="feedback-btn dislike-btn">
+    <button class="feedback-btn dislike-btn" onclick="handleFeedback('dislike')">
       <i class="fas fa-thumbs-down"></i> 点踩
+      <span class="feedback-animation"></span>
     </button>
   </div>
 
